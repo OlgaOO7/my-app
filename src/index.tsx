@@ -5,9 +5,22 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
+import { About } from './features/About/About';
+import { Movies } from './features/About/Movies/Movies';
+
 const router = createBrowserRouter([{
   path: "/",
-  element: <App />
+  element: <App />,
+  children: [
+    {
+      path: "/about",
+      element: <About />,
+    },
+        {
+      path: "/movies",
+      element: <Movies />,
+    }
+  ]
 
 }])
 
