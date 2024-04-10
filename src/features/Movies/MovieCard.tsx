@@ -9,10 +9,10 @@ interface MovieCardProps {
 
 export function MovieCard({ id, title, overview, popularity, }: MovieCardProps) {
   return (
-    <div>
+    <div className="Movies-card">
             <Link to={`/movies/${id}`}>{title}</Link>
-            <div>{overview}</div>
-            <div>{popularity}</div>
+            <div className="Movies-card-overview">{overview}</div>
+            <div className="Movies-card-pop">{popularity}</div>
     </div>
   )
 }
