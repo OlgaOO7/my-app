@@ -1,6 +1,6 @@
 import { Action, Reducer } from "redux";
 
-interface Movie {
+export interface Movie {
   id: number;
   title: string;
   popularity: number;
@@ -40,7 +40,7 @@ const initialState: MovieState = {
   ]
 }
 
-const  moviesReducer: Reducer<MovieState, Action> = (state, action) => {
+const moviesReducer: Reducer<MovieState, Action> = (state, action) => {
   return initialState;
 }
 
