@@ -3,7 +3,7 @@ import { Movie } from "../../reducers/movies";
 import { RootState } from "../../store";
 import { MovieCard } from "./MovieCard";
 
-import './Movies.css';
+import styles "./Movies.module.scss";
 
 interface MoviesProps {
   movies: Movie[]
@@ -12,10 +12,9 @@ interface MoviesProps {
 function Movies({ movies }: MoviesProps) {
   return (
     <section>
-      <div className="Movies-list">
-        {movies.map(m => (
+      <div className={styles.list}>
+        {movies.map((m) => (
           <MovieCard
-            key={m.id}
             id={m.id}
             title={m.title}
             overview={m.overview}
@@ -23,8 +22,7 @@ function Movies({ movies }: MoviesProps) {
         )
         )}
     </div>
-    </section>
-    
+  </section>
   );
 }
 

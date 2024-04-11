@@ -12,6 +12,10 @@
   a {
     color: shared.$primary-color;
   }
+
+  @media (max-width: shared.$max-mobile-width) {
+    margin: 0.5rem;
+  }
 }
 
 .thumbnail {
@@ -22,6 +26,10 @@
 
 .content {
   padding: 1rem;
+
+  @media (max-width: shared.$max-mobile-width) {
+    padding: 0.5rem;
+  }
 
   .overview {
     font-size: small;
