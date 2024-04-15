@@ -14,20 +14,30 @@ import { Provider } from "react-redux";
 import { About } from './features/About/About';
 import Movies from './features/Movies/Movies';
 import store from './store';
+import Home from './features/Home/Home';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
+function AppEntrypoint() {
+  return (
+    <Provider store={store}>
+        <App />
+      </Provider>
+  )
+}
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <Provider store={store}>
-        <App />
-      </Provider>
-    ),
+    element:
+      <AppEntrypoint />,
     children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
       {
         path: "/movies",
         element: <Movies />,
