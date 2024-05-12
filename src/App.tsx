@@ -32,9 +32,9 @@ function App() {
           <LiveTvOutlinedIcon sx={{ mr: 2 }} />
           <Typography variant="h6" color="inherit" noWrap>The Movies DB</Typography>
         <nav>
-          <HeaderLink to="/">Home</HeaderLink>
-          <HeaderLink to="/movies">Movies</HeaderLink>
-          <HeaderLink to="/about">About</HeaderLink>
+          <HeaderLink to="/my-app">Home</HeaderLink>
+          <HeaderLink to="/my-app/movies">Movies</HeaderLink>
+          <HeaderLink to="/my-app/about">About</HeaderLink>
           </nav>
           </Toolbar>
       </AppBar>
