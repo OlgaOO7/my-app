@@ -30,20 +30,20 @@ function AppEntrypoint() {
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/my-app",
     element:
       <AppEntrypoint />,
     children: [
       {
-        path: "/",
+        index: true,
         element: <Home />,
       },
       {
-        path: "/movies",
+        path: "movies",
         element: <Movies />,
       },
       {
-        path: "/about",
+        path: "about",
         element: <About />,
       },
     ],

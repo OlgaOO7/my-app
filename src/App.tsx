@@ -5,6 +5,8 @@ import { AppBar, CssBaseline, Toolbar, Link, ThemeProvider, createTheme, Typogra
 import LiveTvOutlinedIcon from "@mui/icons-material/LiveTvOutlined";
 import { teal } from "@mui/material/colors";
 
+import ErrorBoundary from "./features/ErrorBoundary";
+
 function HeaderLink({children, to}: {to: string, children: React.ReactNode}) {
   return (
     <Link component={RouterLink} to={to} variant="button" color="inherit" sx={{my: 1, mx: 1.5}}>{children}</Link>
@@ -22,7 +24,8 @@ const defaultTheme = createTheme({
 
 function App() {
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ErrorBoundary>
+  <ThemeProvider theme={defaultTheme}>
       <CssBaseline  />
       <AppBar>
         <Toolbar >
@@ -39,6 +42,7 @@ function App() {
         <Outlet />
       </main>
     </ThemeProvider>
+    </ErrorBoundary>
   );
 }
 
